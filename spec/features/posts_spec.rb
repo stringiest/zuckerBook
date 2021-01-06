@@ -1,12 +1,12 @@
 feature 'posts' do
-  scenario 'user can sign in and make a post' do
+  xscenario 'user can sign in and make a post' do
     login_and_make_post
 
     expect(current_path).to eq('/posts')
     expect(page).to have_content('2021 will be a good year')
   end
 
-  scenario 'user can edit a post' do
+  xscenario 'user can edit a post' do
     login_and_make_post
     click_link('Edit')
     fill_in('post_body', with: '')
@@ -18,7 +18,7 @@ feature 'posts' do
     expect(page).to have_content('2020 sucked')
   end
 
-  scenario 'user can delete a post' do
+  xscenario 'user can delete a post' do
     login_and_make_post
     click_link('Delete')
     click_link('ok')

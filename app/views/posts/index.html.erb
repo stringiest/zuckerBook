@@ -24,9 +24,15 @@
         <%= link_to '<i class="far fa-comment"></i>'.html_safe, post_path(post), class: "ml-3", style: "max-width: 20px;" %>
         <%= post.comments.length %>
       </span>
-      <span class="ml-2">
-        <a href="#"><i class="far fa-thumbs-up"></i></a>
-        <%= post.post_reactions.length %>
+      <span class="ml-2" id="likes-form-container">
+        <% if liked?(post) %>
+          <%= link_to "<i id='liked-btn-#{post.id}' class='far fa-thumbs-up text-primary'></i>".html_safe, post_likes_path(post), method: :post, remote: true %>
+        <% else %>
+          <%= link_to "<i id='liked-btn-#{post.id}' class='far fa-thumbs-up text-secondary'></i>".html_safe, post_likes_path(post), method: :post, remote: true %>
+        <% end %>
+        <span id="post-like-count-<%=post.id%>"> 
+          <%= post.likes.uniq {|like| like.user_id }.count %> 
+        </span>
       </span>
    
         <form class="form-inline mb-1" style="float: right;">

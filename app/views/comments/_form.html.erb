@@ -1,4 +1,6 @@
-<%= form_for([@post, @comment], remote: true) do |f| %>
-  <%= f.text_field :body %>
-  <%= f.submit 'Comment' %>
-<% end %>
+<div class="mx-auto text-left px-3 pt-3 pb-3 mt-4" style="width: 98%;">
+  <%= form_for([@post, @comment], remote: true) do |f| %>
+    <%= f.text_field :body %>
+    <%= f.submit 'Comment' %>
+  <% end %>
+</div>

@@ -1,0 +1,20 @@
+document.getElementById('post-like-count-<%=@post.id%>').innerHTML = '<%= @post.likes.uniq {|like| like.user_id }.count %>'
+
+var likeToggle = document.getElementById('liked-btn-<%=@post.id%>');
+var isPrimary = likeToggle.classList.contains('text-primary');
+
+if (isPrimary) {
+  toSecondary();
+} else {
+  toPrimary();
+}
+
+function toSecondary() {
+  likeToggle.classList.remove('text-primary');
+  likeToggle.classList.add('text-secondary');
+}
+
+function toPrimary() {
+  likeToggle.classList.remove('text-secondary');
+  likeToggle.classList.add('text-primary');
+}

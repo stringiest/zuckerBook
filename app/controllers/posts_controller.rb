@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :find_post, only: [:show, :edit, :update, :destroy]
+  helper_method :liked?
 
   def index
     @posts = Post.all
@@ -36,6 +37,10 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     redirect_to posts_url
+  end
+
+  def liked?(post)
+    Like.find_by(post_id: post.id, user_id: current_user.id)
   end
 
   private

@@ -14,7 +14,7 @@
 
   <body>
     <nav class="navbar"> 
-      <a href="/posts"><img src="<%=asset_path('logo.png')%>" alt="zuckerBook"></a>
+      <a href="/posts" class="navbar-brand"><img src="<%=asset_path('logo.png')%>" alt="zuckerBook"></a>
       <div>
         <% if current_user %>
         <span>
@@ -29,7 +29,6 @@
       </div>
     </nav>
    
-    
     <% flash.each do |type, msg| %>
       <div class="alert alert-danger text-center mx-auto" role="alert">
         <%= msg %>
@@ -37,7 +36,7 @@
     <% end %>
     <%= yield %>
 
-    <footer class="navbar fixed-bottom mb-2">
+    <footer class="navbar fixed-bottom" style="background-color: white; border-top: 1px solid lightgrey;">
       <span class="ml-3">
         <a href="#" class="mr-5">Privacy Policy</a>
         <a href="#">Human Capital</a>

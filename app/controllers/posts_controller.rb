@@ -40,6 +40,8 @@ class PostsController < ApplicationController
   end
 
   def liked?(post)
+    return false unless current_user
+
     Like.find_by(post_id: post.id, user_id: current_user.id)
   end
 

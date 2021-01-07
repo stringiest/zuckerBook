@@ -14,6 +14,15 @@ class CommentsController < ApplicationController
     @comment.destroy
   end
 
+  def create_from_index
+    @post = Post.find(params['comment']['post_id'])
+    @post.comments.create(
+      user_id: current_user.id,
+      body: params['comment']['body']
+    )
+    redirect_to posts_url
+  end
+
   private
 
   def comment_params

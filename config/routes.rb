@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     resources :comments
     resources :likes
   end
+
+  post '/comments', controller: 'comments', action: 'create_from_index'
 end

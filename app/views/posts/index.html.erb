@@ -35,10 +35,13 @@
         </span>
       </span>
    
-        <form class="form-inline mb-1" style="float: right;">
-          <input type="text" placeholder="Add Comment" class="form-control form-control-sm">
-          <button class="btn btn-primary mx-2 btn-sm">Submit</button>
-        </form>
+      <%= form_for @comment do |f| %>
+      <span class="input-group ml-3" style="max-width: 400px; min-width: 100px; float: right;">
+        <%= f.hidden_field :post_id, value: post.id %>
+        <%= f.text_field :body, class: "form-control form-control-sm" %>
+        <%= f.submit 'Comment', class: "btn btn-success btn-sm ml-3" %>
+    </span>
+    <% end %>
     </span>
   </div>
 <% end %>

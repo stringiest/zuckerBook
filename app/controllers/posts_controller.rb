@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @comment = Comment.new
   end
 
   def show
@@ -21,6 +22,10 @@ class PostsController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def create_comment
+    
   end
 
   def edit

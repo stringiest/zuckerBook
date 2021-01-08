@@ -15,7 +15,7 @@
       <% end %>
     </span>
     <span class="d-inline-flex">
-      <%= image_tag @post.user.avatar.variant(resize_to_limit: [100, 100]), class: "img-thumbnail rounded m-2" %>
+      <%= image_tag comment.user.avatar.variant(resize_to_limit: [100, 100]), class: "img-thumbnail rounded m-2" %>
       <p class="text-justify m-3"> <%= comment.body %></p>
     </span>
   </div>

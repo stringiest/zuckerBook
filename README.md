@@ -1,33 +1,14 @@
-# AceBook
+# zuckerBook
 
-REQUIRED INSTRUCTIONS:
+## About
 
-1. Fork this repository to `acebook-teamname` and customize
-the below**
+zuckerBook is our very own Facebook clone where a user can create posts, view other's posts, comment on posts and leave a like on posts. On the front end we used HTML, CSS, Bootstrap and a sprinkle of JavaScript. The back end was built entirely in Ruby on Rails.
 
-[You can find the engineering project outline here.](https://github.com/makersacademy/course/tree/master/engineering_projects/rails)
-
-2. The card wall is here: <please update>
-
-## How to contribute to this project
-See [CONTRIBUTING.md](CONTRIBUTING.md)
-
-## Quickstart
-
-First, clone this repository. Then:
-
-```bash
-> bundle install
-> bin/rails db:create
-> bin/rails db:migrate
-
-> bundle exec rspec # Run the tests to ensure it works
-> bin/rails server # Start the server at localhost:3000
-```
 
 ## Entity Relationship Diagram
 
 ![zuckerBook DB Model-](https://user-images.githubusercontent.com/71923215/102097713-296ecb80-3e1e-11eb-941b-408c6223221b.png)
+
 
 ## Class Diagrams
 
@@ -35,6 +16,26 @@ First, clone this repository. Then:
 <img width="696" alt="Reaction Class" src="https://user-images.githubusercontent.com/65411964/102484943-dd5e9980-405e-11eb-9e2a-f6674269dea3.png">
 <img width="563" alt="User Class" src="https://user-images.githubusercontent.com/65411964/102484948-de8fc680-405e-11eb-9fc2-8e0edf6b6bde.png">
 <img width="465" alt="Post Class" src="https://user-images.githubusercontent.com/65411964/102484963-e3547a80-405e-11eb-9279-12c82a2c1244.png">
+
+
+## Sequence Diagrams
+
+### Registering An Account
+
+![zuckerBook register account](https://user-images.githubusercontent.com/71923215/104027127-dd197000-51be-11eb-8e7b-6759e0fec5fd.png)
+
+### Logging In
+
+![zuckerBook login to account](https://user-images.githubusercontent.com/71923215/104026965-9f1c4c00-51be-11eb-96f0-fcc46f75ed34.png)
+
+### Showing Posts
+
+![zuckerBook show posts](https://user-images.githubusercontent.com/71923215/104027262-0934f100-51bf-11eb-87a2-2c6273aeab0d.png)
+
+### Liking A Post
+
+![zuckerBook liking post](https://user-images.githubusercontent.com/71923215/104026735-451b8680-51be-11eb-9e74-6c0bbd5db779.png)
+
 
 ## User Stories
 

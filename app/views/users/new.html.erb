@@ -14,7 +14,7 @@
     <%= f.password_field :password, placeholder: 'password', class: "form-control mb-3" %>
     <%= f.password_field :password_confirmation, placeholder: 'password confirmation', class: "form-control mb-3" %>
     <%= label(:avatar, "profile picture", class: "ml-2") %> 
-    <%= f.file_field :avatar, required: true, class: "form-control-file mb-3" %>
+    <%= f.file_field :avatar, required: true, accept: 'image/*', class: "form-control-file mb-3" %>
     <%= f.submit 'Sign Up', class: "btn btn-success" %>
   <% end %>
 </div>

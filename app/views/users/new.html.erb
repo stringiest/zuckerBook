@@ -13,6 +13,8 @@
     <%= f.text_field :email, placeholder: 'email', class: "form-control mb-3" %>
     <%= f.password_field :password, placeholder: 'password', class: "form-control mb-3" %>
     <%= f.password_field :password_confirmation, placeholder: 'password confirmation', class: "form-control mb-3" %>
+    <label>profile picture</label>
+    <%= f.file_field :avatar %>
     <%= f.submit 'Sign Up', class: "btn btn-success" %>
   <% end %>
 </div>

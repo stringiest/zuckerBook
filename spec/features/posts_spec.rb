@@ -26,4 +26,10 @@ feature 'posts' do
     expect(current_path).to eq('/posts')
     expect(page).not_to have_content('2021 will be a good year')
   end
+
+  scenario 'user cannot post if not signed in' do
+    visit('/posts')
+
+    expect(page).to have_no_link('New Post')
+  end
 end

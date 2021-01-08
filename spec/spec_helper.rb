@@ -1,9 +1,16 @@
-# require 'simplecov'
-# SimpleCov.start 'rails' do
-#   add_filter '/bin/'
-#   add_filter '/db/'
-#   add_filter '/spec/' # for rspec
-# end
+require 'simplecov'
+require 'simplecov-console'
+
+SimpleCov.start 'rails' do
+  add_filter '/bin/'
+  add_filter '/db/'
+  add_filter '/spec/'
+end
+
+SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::Console,
+])
 
 require 'capybara/rspec'
 require_relative './features/web_helpers'

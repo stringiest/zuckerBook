@@ -1,5 +1,8 @@
 # zuckerBook
 
+## About
+
+zuckerBook is our very own Facebook clone where a user can create posts, view other's posts, comment on posts and leave a like on posts. On the front end we used HTML, CSS, Bootstrap and a sprinkle of JavaScript. The back end was built entirely in Ruby on Rails.
 
 ## Entity Relationship Diagram
 

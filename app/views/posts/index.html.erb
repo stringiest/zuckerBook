@@ -21,14 +21,14 @@
     </span>
     <span class="card-footer">
       <span>
-        <%= link_to '<i class="far fa-comment"></i>'.html_safe, post_path(post), class: "ml-3", style: "max-width: 20px;" %>
+        <%= link_to '<i class="far fa-comment"></i>'.html_safe, post_path(post), class: "ml-3", style: "max-width: 20px;", id: "comment-link" %>
         <%= post.comments.length %>
       </span>
       <span class="ml-2" id="likes-form-container">
         <% if liked?(post) %>
-          <%= link_to "<i id='liked-btn-#{post.id}' class='far fa-thumbs-up text-primary'></i>".html_safe, post_likes_path(post), method: :post, remote: true %>
+          <%= link_to "<i id='liked-btn-#{post.id}' class='far fa-thumbs-up text-primary'></i>".html_safe, post_likes_path(post), method: :post, remote: true, class: "liked-btn" %>
         <% else %>
-          <%= link_to "<i id='liked-btn-#{post.id}' class='far fa-thumbs-up text-secondary'></i>".html_safe, post_likes_path(post), method: :post, remote: true %>
+          <%= link_to "<i id='liked-btn-#{post.id}' class='far fa-thumbs-up text-secondary'></i>".html_safe, post_likes_path(post), method: :post, remote: true, class: "liked-btn" %>
         <% end %>
         <span id="post-like-count-<%=post.id%>"> 
           <%= post.likes.uniq {|like| like.user_id }.count %> 

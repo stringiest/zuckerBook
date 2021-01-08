@@ -19,9 +19,9 @@ def login_and_make_post
   create_user_in_test_db
   login_successfully
 
-  click_link('New post')
+  click_link('New Post')
 
   fill_in('post_body', with: '2021 will be a good year')
 
-  click_button('Create Post')
+  click_button('Submit')
 end

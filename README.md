@@ -14,11 +14,19 @@
 
 ## Sequence Diagrams
 
+### Registering An Account
+
 ![zuckerBook register account](https://user-images.githubusercontent.com/71923215/104027127-dd197000-51be-11eb-8e7b-6759e0fec5fd.png)
+
+### Logging In
 
 ![zuckerBook login to account](https://user-images.githubusercontent.com/71923215/104026965-9f1c4c00-51be-11eb-96f0-fcc46f75ed34.png)
 
+### Showing Posts
+
 ![zuckerBook show posts](https://user-images.githubusercontent.com/71923215/104027262-0934f100-51bf-11eb-87a2-2c6273aeab0d.png)
+
+### Liking A Post
 
 ![zuckerBook liking post](https://user-images.githubusercontent.com/71923215/104026735-451b8680-51be-11eb-9e74-6c0bbd5db779.png)
 

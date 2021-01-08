@@ -34,11 +34,12 @@
           <%= post.likes.uniq {|like| like.user_id }.count %> 
         </span>
       </span>
-   
+        <%if current_user  %> 
         <form class="form-inline mb-1" style="float: right;">
           <input type="text" placeholder="Add Comment" class="form-control form-control-sm">
           <button class="btn btn-primary mx-2 btn-sm">Submit</button>
         </form>
+        <% end %> 
     </span>
   </div>
 <% end %>
